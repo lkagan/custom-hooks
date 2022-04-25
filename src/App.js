@@ -1,8 +1,10 @@
 import './App.css';
 import useLocalStorage from "./useLocalStorage";
+import useUpdateLogger from "./useUpdateLogger";
 
 function App() {
     const [value, setValue] = useLocalStorage('name', '');
+    useUpdateLogger(value);
 
     return (
         <input
